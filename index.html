@@ -1,1 +1,251 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANIX - Soluciones en Saneamiento</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tipografía Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sanixGreen: '#70cb53', // Verde corporativo SANIX
+                        sanixDark: '#121212',
+                        sanixGray: '#f4f4f4'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        heading: ['Cubano', 'Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Cubano';
+            src: url('https://fonts.cdnfonts.com/s/16143/Cubano-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .font-cubano {
+            font-family: 'Cubano', 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased">
 
+    <!-- NAV / ENCABEZADO -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <!-- Logo SANIX -->
+            <a href="#" class="flex items-center">
+                <img src="assets/SANIX CORRECCION-10 (1).png" alt="SANIX Soluciones en Saneamiento" class="h-12 w-auto">
+            </a>
+            
+            <!-- Menú de Navegación -->
+            <div class="hidden md:flex space-x-8 font-medium text-sm text-gray-700">
+                <a href="#inicio" class="hover:text-sanixGreen transition">Inicio</a>
+                <a href="#servicios" class="hover:text-sanixGreen transition">Servicios</a>
+                <a href="#diferencial" class="hover:text-sanixGreen transition">¿Por qué SANIX?</a>
+                <a href="#nosotros" class="hover:text-sanixGreen transition">Nosotros</a>
+            </div>
+
+            <!-- Botón WhatsApp Nav -->
+            <a href="https://wa.me/5492616442773?text=Hola%20SANIX,%20quisiera%20solicitar%20un%20presupuesto" target="_blank" class="bg-sanixGreen text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-opacity-90 transition flex items-center space-x-2 shadow-md">
+                <i class="fab font-bold fa-whatsapp text-lg"></i>
+                <span class="hidden sm:inline">Solicitar Presupuesto</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN 1: HERO -->
+    <section id="inicio" class="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-1/2 space-y-6 text-center md:text-left">
+                <span class="inline-block bg-green-100 text-sanixGreen text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Servicios a Domicilio en Mendoza
+                </span>
+                <h1 class="text-4xl md:text-5xl font-cubano text-sanixDark leading-tight uppercase">
+                    Sanidad Ambiental Inteligente y Segura
+                </h1>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Protegemos tu hogar, empresa o institución con soluciones definitivas de control de plagas y limpieza de reservorios. Efectividad garantizada, sin riesgos para tu familia, mascotas o clientes.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="https://wa.me/5492616442773?text=Hola%20SANIX,%20quisiera%20solicitar%20un%20presupuesto" target="_blank" class="bg-sanixGreen text-white px-8 py-4 rounded-xl font-bold text-base hover:shadow-lg hover:scale-[1.02] transition flex items-center justify-center space-x-3">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>Presupuesto por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-md bg-white p-6 rounded-2xl shadow-xl border border-gray-100 text-center">
+                    <img src="assets/SANIX CORRECCION-10 (1).png" alt="SANIX Logo" class="mx-auto h-24 object-contain mb-6">
+                    <div class="grid grid-cols-2 gap-4 text-left text-sm">
+                        <div class="p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-check-circle text-sanixGreen mb-1"></i>
+                            <p class="font-bold text-gray-800">ANMAT Banda Verde</p>
+                            <p class="text-xs text-gray-500">Baja toxicidad</p>
+                        </div>
+                        <div class="p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-certificate text-sanixGreen mb-1"></i>
+                            <p class="font-bold text-gray-800">Certificados</p>
+                            <p class="text-xs text-gray-500">Aptos inspección</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: PROPUESTA DE VALOR -->
+    <section class="py-16 bg-sanixDark text-white">
+        <div class="max-w-5xl mx-auto px-4 text-center space-y-6">
+            <h2 class="text-3xl md:text-4xl font-cubano text-sanixGreen uppercase">
+                Tu tranquilidad es nuestra prioridad
+            </h2>
+            <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-4xl mx-auto">
+                Entendemos que la presencia de vectores o la contaminación del agua representan un riesgo crítico. En SANIX no solo eliminamos el problema, sino que diseñamos un escudo protector duradero. Te ayudamos a cumplir con las normativas de sanidad, a proteger la mercadería de tu negocio, a mantener la salud de tu familia y a operar tu empresa sin interrupciones ni preocupaciones.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: NUESTROS SERVICIOS -->
+    <section id="servicios" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-3 mb-16">
+                <h2 class="text-3xl md:text-4xl font-cubano text-sanixDark uppercase">Soluciones Integrales de Saneamiento</h2>
+                <p class="text-gray-600">Servicios técnicos especializados a domicilio para hogares, comercios e instituciones.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-green-100 text-sanixGreen rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sanixDark mb-3">Desinsectación y Control de Plagas</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Control preventivo y correctivo de insectos rastreros y voladores (cucarachas, chinches de cama, arañas, hormigas, pulgas). Utilizamos pulverización neumática residual y geles activos de alta atracción.
+                    </p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-green-100 text-sanixGreen rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-shield-cat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sanixDark mb-3">Desratización de Alta Seguridad</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Erradicación y exclusión de roedores mediante cordones sanitarios perimetrales y cebos parafinados. Instalamos estaciones de control herméticas, 100% seguras para niños y mascotas (ideal para escuelas y predios deportivos).
+                    </p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-green-100 text-sanixGreen rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-faucet-drip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sanixDark mb-3">Limpieza y Desinfección de Tanques de Agua</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Higiene de reservorios desde 400 hasta más de 25.000 litros (tanques en altura y cisternas). Vaciado técnico, aspirado de lodos y desinfección química de grado industrial para garantizar la inocuidad hídrica.
+                    </p>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-green-100 text-sanixGreen rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-dove"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sanixDark mb-3">Exclusión de Murciélagos y Palomas</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Tratamientos de desalojo pasivo y sellado físico de estructuras (plenos, techos y canaletas) mediante mallas de acero inoxidable, evitando anidamientos y protegiendo el inmueble del guano.
+                    </p>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-green-100 text-sanixGreen rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-pump-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sanixDark mb-3">Desinfección Biológica</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Sanitización ambiental profunda por microaspersión con amonio cuaternario, orientada a la erradicación de virus, bacterias, hongos y esporas.
+                    </p>
+                </div>
+
+                <!-- Tarjeta Consulta -->
+                <div class="bg-sanixGreen text-white p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-cubano mb-3">¿Necesitás una inspección a domicilio?</h3>
+                        <p class="text-white/90 text-sm">Coordinamos la visita de un técnico a tu inmueble, comercio o colegio.</p>
+                    </div>
+                    <a href="https://wa.me/5492616442773?text=Hola%20SANIX,%20necesito%20coordinar%20una%20inspeccion" target="_blank" class="mt-6 bg-white text-sanixDark text-center font-bold py-3 rounded-xl hover:bg-gray-100 transition">
+                        Agendar Inspección
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: DIFERENCIAL -->
+    <section id="diferencial" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-cubano text-sanixDark uppercase">¿Por qué elegir SANIX?</h2>
+                <p class="text-gray-600 text-base">No hacemos simples fumigaciones; aplicamos ingeniería en sanidad ambiental. Nuestro método se basa en la trazabilidad, la seguridad y el respaldo documental.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flex space-x-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-sanixGreen flex items-center justify-center font-bold">✓</div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Insumos de Baja Toxicidad (Banda Verde)</h4>
+                        <p class="text-sm text-gray-600">Productos domisanitarios aprobados por ANMAT, seguros para la industria alimentaria, hospitales, niños y mascotas.</p>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-sanixGreen flex items-center justify-center font-bold">✓</div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Informes Técnicos Premium</h4>
+                        <p class="text-sm text-gray-600">Entrega de informe detallado post-servicio: diagnóstico, metodología, trazabilidad fotográfica y recomendaciones.</p>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-sanixGreen flex items-center justify-center font-bold">✓</div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Certificación Oficial</h4>
+                        <p class="text-sm text-gray-600">Certificados de sanidad ambiental obligatorios y válidos ante inspecciones municipales, DGE y autoridades sanitarias.</p>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-sanixGreen flex items-center justify-center font-bold">✓</div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Horarios Flexibles</h4>
+                        <p class="text-sm text-gray-600">Adaptamos los operativos a los horarios de cierre de tu local para no interrumpir tus ventas ni la atención al público.</p>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-sanixGreen flex items-center justify-center font-bold">✓</div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-1">Garantía de Servicio</h4>
+                        <p class="text-sm text-gray-600">Auditorías y refuerzos programados asegurando que el ciclo biológico de la plaga se rompa definitivamente.</p>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-sanixGreen flex items-center justify-center font-bold">✓</div>
+                    <div>
+                        <h4 class="font-bold
