@@ -339,6 +339,77 @@
             </div>
         </div>
     </section>
+    <!-- SECCIÓN FORMULARIO DE COTIZACIÓN RÁPIDA -->
+    <section id="cotizar" class="py-16 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100">
+                <div class="text-center space-y-2 mb-8">
+                    <span class="inline-block bg-green-100 text-sanixGreen text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Atención Inmediata
+                    </span>
+                    <h2 class="text-3xl font-cubano text-sanixDark uppercase">Solicitar Cotización Rápida</h2>
+                    <p class="text-gray-600 text-sm">Completa los 3 datos y recibí tu presupuesto personalizado por WhatsApp al instante.</p>
+                </div>
+
+                <form id="quote-form" onsubmit="sendWhatsAppQuote(event)" class="space-y-5">
+                    <!-- Campo 1: Tipo de Propiedad -->
+                    <div>
+                        <label for="prop-type" class="block text-sm font-bold text-gray-700 mb-2">1. Tipo de Propiedad / Inmueble</label>
+                        <select id="prop-type" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-sanixGreen focus:border-transparent outline-none bg-gray-50 text-gray-800 text-sm">
+                            <option value="" disabled selected>Seleccioná una opción...</option>
+                            <option value="Casa / Domicilio Particular">Casa / Domicilio Particular</option>
+                            <option value="Departamento / Edificio / Consorcio">Departamento / Edificio / Consorcio</option>
+                            <option value="Local Comercial / Gastronómico">Local Comercial / Gastronómico</option>
+                            <option value="Escuela / Institución / Depósito">Escuela / Institución / Depósito</option>
+                        </select>
+                    </div>
+
+                    <!-- Campo 2: Servicio Requerido -->
+                    <div>
+                        <label for="service-type" class="block text-sm font-bold text-gray-700 mb-2">2. Servicio Requerido</label>
+                        <select id="service-type" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-sanixGreen focus:border-transparent outline-none bg-gray-50 text-gray-800 text-sm">
+                            <option value="" disabled selected>Seleccioná el servicio...</option>
+                            <option value="Desinsectación (Cucarachas, Hormigas, Chinches, etc.)">Desinsectación / Control de Plagas</option>
+                            <option value="Desratización de Alta Seguridad">Desratización de Alta Seguridad</option>
+                            <option value="Limpieza y Desinfección de Tanques de Agua">Limpieza de Tanque de Agua</option>
+                            <option value="Exclusión de Murciélagos / Palomas">Exclusión de Murciélagos / Palomas</option>
+                            <option value="Desinfección Biológica (Amonio Cuaternario)">Desinfección Biológica</option>
+                            <option value="Inspección General / Múltiples Servicios">Inspección General / Varios</option>
+                        </select>
+                    </div>
+
+                    <!-- Campo 3: Barrio / Zona -->
+                    <div>
+                        <label for="zone" class="block text-sm font-bold text-gray-700 mb-2">3. Barrio o Zona en Mendoza</label>
+                        <input type="text" id="zone" placeholder="Ej: Godoy Cruz, Sexta Sección, Maipú..." required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-sanixGreen focus:border-transparent outline-none bg-gray-50 text-gray-800 text-sm">
+                    </div>
+
+                    <!-- Botón de Envío -->
+                    <div class="pt-3">
+                        <button type="submit" class="w-full bg-sanixGreen text-white py-4 rounded-xl font-bold text-base hover:bg-opacity-90 transition flex items-center justify-center space-x-3 shadow-md">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                            <span>Enviar Cotización por WhatsApp</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Script de armado automático del mensaje de WhatsApp -->
+        <script>
+            function sendWhatsAppQuote(event) {
+                event.preventDefault();
+                const propType = document.getElementById('prop-type').value;
+                const serviceType = document.getElementById('service-type').value;
+                const zone = document.getElementById('zone').value;
+
+                const phone = "5492616442773";
+                const message = `Hola SANIX! Quisiera solicitar un presupuesto:%0A%0A• *Propiedad:* ${encodeURIComponent(propType)}%0A• *Servicio:* ${encodeURIComponent(serviceType)}%0A• *Zona/Ubicación:* ${encodeURIComponent(zone)}`;
+
+                window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+            }
+        </script>
+    </section>
 
     <!-- SECCIÓN 4: DIFERENCIAL -->
  <!-- SECCIÓN 4: DIFERENCIAL -->
